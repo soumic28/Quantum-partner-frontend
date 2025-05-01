@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://quantum-backend-hw57.onrender.com/api/v1";
