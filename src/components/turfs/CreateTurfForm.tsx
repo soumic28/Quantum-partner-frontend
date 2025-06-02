@@ -21,6 +21,7 @@ import { Checkbox } from "../ui/checkbox";
 import TurfGalleryInput from "./TurfGalleryInput";
 import PricingPlanInput from "./PricingPlanInput";
 import { AppTextArea } from "../app-ui/AppTextArea";
+import { BACKEND_URL } from "../../../config";
 
 const createTurfFormSchema = z.object({
   name: z.string().nonempty({ message: "Full Name is required" }),
@@ -101,7 +102,7 @@ const CreateTurfForm = () => {
   async function onSubmit(values: z.infer<typeof createTurfFormSchema>) {
     console.log("✅ Form submitted successfully with values:", values);
     try {
-      const response = await fetch("http://localhost:3001/api/v1/turf", {
+      const response = await fetch(`${BACKEND_URL}/turf`, {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",

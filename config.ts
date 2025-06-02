@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://quantum-backend-hw57.onrender.com/api/v1";
+export const BACKEND_URL = "http://quantum-turf-api-env.eba-8uvgbytc.us-east-1.elasticbeanstalk.com/api/v1";
